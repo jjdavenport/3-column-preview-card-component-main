@@ -7,24 +7,28 @@ const Column = () => {
         <section
           className={`${
             i.category === "Sedans"
-              ? "bg-brightOrange rounded-t md:rounded-l"
+              ? "rounded-t-lg bg-brightOrange md:rounded-none md:rounded-l-lg"
               : i.category === "SUVs"
-              ? "bg-darkCyan rounded-none"
-              : "bg-veryDarkCyan rounded-b md:rounded-r"
+                ? "rounded-none bg-darkCyan"
+                : "rounded-b-lg bg-veryDarkCyan md:rounded-none md:rounded-r-lg"
           }`}
           key={i.category}
         >
-          <article className="flex flex-col gap-4 p-8">
+          <article className="flex flex-col gap-8 p-8">
             <img className="w-fit" src={i.icon} />
-            <span className="text-veryLightGray">{i.category}</span>
-            <p className="text-transparentWhite">{i.description}</p>
+            <span className="font-bigShouldersDisplay text-5xl font-bold uppercase text-veryLightGray">
+              {i.category}
+            </span>
+            <p className="text-custom font-lexendDeca text-sm font-normal text-transparentWhite">
+              {i.description}
+            </p>
             <button
-              className={`hover:outline hover:outline-2 hover:outline-white hover:bg-transparent hover:text-white bg-white w-fit rounded-full p-2 ${
+              className={`w-fit rounded-full bg-white px-4 py-2 font-lexendDeca font-normal transition-colors duration-300 ease-in-out hover:bg-transparent hover:text-white hover:outline hover:outline-2 hover:outline-white ${
                 i.category === "Sedans"
                   ? "text-brightOrange"
                   : i.category === "SUVs"
-                  ? "text-darkCyan"
-                  : "text-veryDarkCyan"
+                    ? "text-darkCyan"
+                    : "text-veryDarkCyan"
               }`}
             >
               Learn More

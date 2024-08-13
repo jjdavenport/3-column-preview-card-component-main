@@ -5,10 +5,12 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-      <main className="flex flex-col md:flex-row py-10 px-8">
-        <Column />
-      </main>
-      <Footer />
+      <div className="grid h-screen">
+        <main className="md:px-custom flex flex-col items-center justify-center px-8 py-10 md:flex-row md:py-0">
+          <Column />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

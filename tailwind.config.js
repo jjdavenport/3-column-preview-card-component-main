@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      padding: {
+        custom: "clamp(0.5rem, -13.7857rem + 29.7619vw, 13rem)",
+      },
+      fontSize: {
+        custom: "0.938rem",
+      },
       fontFamily: {
         lexendDeca: ["lexend deca", "sans-serif"],
         bigShouldersDisplay: ["big shoulders display", "sans-serif"],
