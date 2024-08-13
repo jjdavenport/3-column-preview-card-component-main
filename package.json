@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jjdavenport.github.io/3-column-preview-card-main",
+  "homepage": "https://jjdavenport.github.io/3-column-preview-card-component-main",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "devt": "npx tailwindcss -i ./src/index.css -o ./src/app.css --watch"
+    "devt": "npx tailwindcss -i ./src/index.css -o ./src/app.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
